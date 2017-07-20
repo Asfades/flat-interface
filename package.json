@@ -1,0 +1,22 @@
+{
+  "name": "flat-interface-els",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asfades/flat-interface.git"
+  },
+  "author": "Serhii Horbenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asfades/flat-interface/issues"
+  },
+  "homepage": "https://github.com/Asfades/flat-interface#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
