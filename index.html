@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bootstrap v4 only grid system | JonathanMH</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap v4 only grid system | JonathanMH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+  <!--<link rel="stylesheet" href="build/css/style.css">-->
+  <link rel="stylesheet" href="build/css/main.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="flat-design-body">
+  <header class="header">
     <div class="container">
-      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-      <div class="row">
-        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+      <h1>Flat User Interface Elements</h1>
+      <div class="row align-items-center">
+        <div class="col header__line"></div>
+        <div class="col-12 col-md-auto">
+          <div class="header__slogan">fully scalable / totally free</div>
+        </div>
+        <div class="col header__line"></div>
       </div>
-
-      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
       <div class="row">
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-      </div>
-
-      <!-- Columns are always 50% wide, on mobile and desktop -->
-      <div class="row">
-        <div class="col-xs-6">.col-xs-6</div>
-        <div class="col-xs-6">.col-xs-6</div>
+        <div class="header__reference">2013 - mockup crafted by mariedehayes.com</div>
       </div>
     </div>
-  </body>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="profile-tab">
+          <div class="profile-tab__profile-picture profile-picture">
+            <div class="profile-picture__cover"></div>
+            <div class="profile-picture__avatar"></div>
+          </div>
+          <div class="profile-tab__name">Lyne Williams</div>
+          <div class="profile-tab__prof">Food Photographer</div>
+          <a class="profile-tab__follow" href="#" rel="nofollow">follow me</a>
+          <div class="profile-tab__underline"></div>
+          <span class="profile-tab__foll-count">1,698 following</span>
+          <span class="profile-tab__foll-count">257 followers</span>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3"></div>
+      <div class="col-12 col-sm-6 col-lg-3"></div>
+      <div class="col-12 col-sm-6 col-lg-3"></div>
+    </div>
+  </div>
+</body>
+
 </html>

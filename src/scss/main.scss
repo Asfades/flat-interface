@@ -1,0 +1,114 @@
+@import '_vars';
+@import '_fonts';
+
+.flat-design-body {
+    background-color: #ddf; 
+    font-family: Signika, sans-serif;
+}
+
+.header {
+  background-color: $main-theme-color;
+  font-weight: 300;
+  min-height: 200px;
+  margin-bottom: 40px;
+  text-align: center;
+  
+    h1 {
+        color: $main-theme-text-color;
+        padding: 30px 0 20px;
+        text-align: center;
+    }
+
+    &__line {
+        height: 0;
+        border-top: 1px solid white;
+    }
+    
+    &__slogan {
+        color: white;
+        text-transform: uppercase;
+    }
+
+    &__reference {
+        color: #991a41;
+        margin: 0 auto;
+    }
+}
+
+.profile-tab {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+
+    &__name, &__prof, &__follow {
+        line-height: 1;
+        width: 100%;
+    }
+
+    &__name, &__follow {
+        text-transform: uppercase;
+    }
+
+    &__name {
+        font-size: 1.4em;
+    }
+
+    &__prof, &__foll-count {
+        color: #aaa;
+    }
+
+    &__follow {
+        background-color: $main-theme-color;
+        border-radius: 2px;
+        width: 60%;
+        padding: 12px 0;
+        margin: 10px;
+
+        &:hover, &:link, &:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: #e3356c;
+        }
+    }
+
+    &__underline {
+        border-top: 1px solid #ccc;
+        color: #ddd;
+        margin: 5px 0 10px;
+        width: 85%;
+    }
+
+    &__foll-count {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+
+.profile-picture {
+    width: 100%;
+    position: relative;
+    margin-bottom: 65px;
+    
+    &__cover {
+       background: url(../img/shutterstock.png) center;
+       background-size: cover; 
+       padding-top: 50%;
+    }
+
+     &__avatar {
+        background: url(../img/evgeniyaporechenskaya.png) center;
+        background-size: contain;
+        border-radius: 50%;
+        position: absolute;
+        padding: 20%;
+        top: 60%;
+        left: 28%;
+    }
+}
