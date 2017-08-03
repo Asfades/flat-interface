@@ -57,7 +57,7 @@
     }
 
     &__prof, &__foll-count {
-        color: #aaa;
+        color: $text-light-grey;
     }
 
     &__follow {
@@ -187,7 +187,8 @@
 
     &__input {
         border: none;
-        width: 80%;
+        max-width: 80%;
+        min-width: 60%;
     }
 
     &__input:focus {
@@ -205,11 +206,15 @@
         color: #baa;
         cursor: pointer;
         padding: 0 0 0 1em;
-        font-size: 1em;
     }
 
     &__submit:focus {
         outline: none;
+    }
+
+    &__submit--pink-ok {
+        background-color: $main-color;
+        padding: 0;
     }
 }
 
@@ -247,7 +252,9 @@
 
 .inner-text__text {
     background-color: white;
+    color: $text-light-grey;
     display: none;
+    font-size: 14px;
     opacity: 0;
 }
 
