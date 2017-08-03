@@ -1,4 +1,4 @@
-@import '_vars';
+@import 'vars/_colors';
 @import '_fonts';
 
 .flat-design-body {
@@ -7,14 +7,14 @@
 }
 
 .header {
-  background-color: $main-theme-color;
+  background-color: $main-color;
   font-weight: 300;
   min-height: 200px;
   margin-bottom: 40px;
   text-align: center;
   
     h1 {
-        color: $main-theme-text-color;
+        color: $main-text-color;
         padding: 30px 0 20px;
         text-align: center;
     }
@@ -61,7 +61,7 @@
     }
 
     &__follow {
-        background-color: $main-theme-color;
+        background-color: $main-color;
         border-radius: 2px;
         width: 60%;
         padding: 12px 0;
@@ -73,7 +73,7 @@
         }
 
         &:hover {
-            background-color: #e3356c;
+            background-color: $main-color-hov;
         }
     }
 
@@ -87,6 +87,13 @@
     &__foll-count {
         width: 50%;
         margin-bottom: 10px;
+    }
+}
+
+.foll-count {
+    &__number {
+        color: #333;
+        font-weight: bold;
     }
 }
 
@@ -114,18 +121,137 @@
 }
 
 .icons-large {
-    &__icon--cook {
-        background: $main-theme-color url(../img/icons/fork&spoon.png);
-    }
+    margin: 0 10px;
 
     &__icon {
-        background-size: 35%;
+        background-size: 40%;
         background-position: center;
         background-repeat: no-repeat;
         border-radius: 50%;
-        display: inline-block;
-        margin: 0 10%;
-        width: 30%;
-        padding-top: 30%;
+        margin: 0 auto;
+        width: 85%;
+        padding-top: 85%;
     }
+
+    &__icon--cook {
+        background-color: $main-color;
+        background-image: url(../img/icons/fork&spoon.png);
+        background-size: 35%;
+        
+        &:hover {
+            background-color: $main-color-hov;
+        }
+    }
+
+    &__icon--bowknot {
+        background-color: $theme-coral-color;
+        background-image: url(../img/icons/bowknot.png);
+        background-size: 45%;
+
+        &:hover {
+            background-color: $theme-coral-color-hov;
+        }
+    }
+
+    &__icon--heart {
+        background-color: $theme-orange-color;
+        background-image: url(../img/icons/heart.png);
+
+        &:hover {
+            background-color: $theme-orange-color-hov;
+        }
+    }
+
+    &__icon--deer {
+        background-color: $theme-sea-green-color;
+        background-image: url(../img/icons/deer.png);
+
+        &:hover {
+            background-color: $theme-sea-green-color-hov;
+        }
+    }
+
+    
+}
+
+.row--bot-space-small {
+    margin-bottom: 15px !important;
+}
+
+.search {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &__input {
+        border: none;
+        width: 80%;
+    }
+
+    &__input:focus {
+        outline-style: none;
+    }
+
+    &__input::placeholder {
+        color: #baa;
+    }
+
+    &__submit {
+        background: white;
+        border: none;
+        border-left: 1px solid #baa;
+        color: #baa;
+        cursor: pointer;
+        padding: 0 0 0 1em;
+        font-size: 1em;
+    }
+
+    &__submit:focus {
+        outline: none;
+    }
+}
+
+.bookmarks {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    &__item {
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+    
+    &__item--active {
+        background-color: white;
+    }
+
+    &__item--pink {
+        background-color: $main-color;
+    }
+
+    &__item--coral {
+        background-color: $theme-coral-color;
+    }
+
+    &__item--pink, 
+    &__item--coral {
+        color: white;
+    }
+}
+
+.tabs-box__inner-text {
+    background-color: white;
+    padding: 15px;
+}
+
+.inner-text__text {
+    background-color: white;
+    display: none;
+    opacity: 0;
+}
+
+.inner-text__text--active {
+    display: block;
+    opacity: 1;
 }
