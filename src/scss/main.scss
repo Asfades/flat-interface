@@ -112,3 +112,20 @@
         left: 28%;
     }
 }
+
+.icons-large {
+    &__icon--cook {
+        background: $main-theme-color url(../img/icons/fork&spoon.png);
+    }
+
+    &__icon {
+        background-size: 35%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 10%;
+        width: 30%;
+        padding-top: 30%;
+    }
+}
