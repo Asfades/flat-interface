@@ -1,11 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
-
-var dir = {
-  scr: 'scr/',
-  build: 'build/'
-}
+var imagemin = require('gulp-imagemin');
 
 gulp.task('bootstrap-grid', function () {
   gulp.src('src/scss/style.scss')
@@ -20,9 +16,16 @@ gulp.task('css', function() {
     .pipe(gulp.dest('build/css/'));
 });
 
+gulp.task('images', function() {
+  return gulp.src('src/img/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/img/'));
+});
+
 // Watch task
 gulp.task('default', function () {
   // run task initially, after that watch
-  gulp.start('css');
-  gulp.watch('src/scss/*.scss', ['css']);
+  gulp.start(['css', 'images']);
+  gulp.watch('src/scss/**/*.scss', ['css']);
+  gulp.watch('src/img', ['images']);
 });

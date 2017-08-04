@@ -101,7 +101,6 @@
 .profile-picture {
     width: 100%;
     position: relative;
-    margin-bottom: 65px;
     
     &__cover {
        background: url(../img/shutterstock.png) center;
@@ -117,6 +116,14 @@
         padding: 20%;
         top: 60%;
         left: 28%;
+    }
+}
+
+.whitespace {
+    width: 100%;
+
+    &__height-quarter {
+        padding-top: 25%;
     }
 }
 
@@ -179,16 +186,21 @@
 }
 
 .search {
+    align-items: center;
     background-color: white;
     border-radius: 10px;
-    padding: 3px 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 2em;
     margin-bottom: 20px;
-    width: 100%;
+    overflow: hidden;
+    position: relative;
 
     &__input {
         border: none;
-        max-width: 80%;
-        min-width: 60%;
+        margin: 0 auto;
+        padding: 0 5px;
+        width: 75%;
     }
 
     &__input:focus {
@@ -202,10 +214,17 @@
     &__submit {
         background: white;
         border: none;
-        border-left: 1px solid #baa;
         color: #baa;
         cursor: pointer;
-        padding: 0 0 0 1em;
+        padding: 0 10px;
+
+        &--border-left {
+            border-left: 1px solid #baa;
+        }
+
+        &--fa:hover {
+            color: black;
+        }
     }
 
     &__submit:focus {
@@ -214,7 +233,19 @@
 
     &__submit--pink-ok {
         background-color: $main-color;
-        padding: 0;
+        color: white;
+        height: 2em;
+        
+        &:hover {
+            background-color: $main-color-hov;
+        }
+    }
+
+    &__fa--pink-ok {
+        color: #baa;
+        line-height: 2em !important;
+        margin: 0 5px;
+        transform: rotateY(180deg);
     }
 }
 
@@ -226,7 +257,7 @@
         display: inline-block;
         padding: 10px 20px;
     }
-    
+
     &__item--active {
         background-color: white;
     }
@@ -235,8 +266,16 @@
         background-color: $main-color;
     }
 
+    &__item--pink:hover {
+        background-color: $main-color-hov;
+    }
+
     &__item--coral {
         background-color: $theme-coral-color;
+    }
+
+    &__item--coral:hover {
+        background-color: $theme-coral-color-hov;
     }
 
     &__item--pink, 
@@ -261,4 +300,32 @@
 .inner-text__text--active {
     display: block;
     opacity: 1;
+}
+
+.icons-small {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+}
+
+.message {
+    position: relative;
+    cursor: pointer;
+
+    &__counter {
+        background-color: $main-color;
+        border-radius: 50%;
+        font-size: 12px;
+        line-height: 1.5em;
+        position: absolute;
+        right: -.6em;
+        text-align: center;
+        top: 0;
+        width: 1.5em;
+    }
+
+    &__counter:hover {
+        background-color: $main-color-hov;
+    }
 }
