@@ -303,10 +303,11 @@
 }
 
 .icons-small {
+    align-items: center;
     color: white;
     display: flex;
     justify-content: space-between;
-    font-size: 2em;
+    font-size: 2.2em;
 }
 
 .message {
@@ -327,5 +328,37 @@
 
     &__counter:hover {
         background-color: $main-color-hov;
+    }
+}
+
+.menu-button {
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 45px;
+    height: 45px;
+    padding-top: 7px;
+
+    &__bar {
+        background-color: white;
+        height: 4px;
+        margin: 0 auto;
+        margin-top: 3px;
+        width: 60%;
+    }
+
+    &__bar:nth-child(even) {
+        height: 5px;
+    }
+
+    &:hover &__bar:nth-child(even) {
+        animation-name: middle-bar-fadeout;
+        animation-duration: 1s;
+        opacity: 0;
+    }
+}
+
+@keyframes middle-bar-fadeout {
+    to {
+        opacity: 0;
     }
 }
